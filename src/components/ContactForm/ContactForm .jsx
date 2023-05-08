@@ -2,17 +2,14 @@ import css from './ContactForm.module.css';
 import propTypes from 'prop-types';
 import React, { useState } from 'react';
 
-const ContactForm = ({ handleSubmit }) => {
-  const [name, setName] = useState('');
-  const [number, setNumber] = useState('');
-
-  const onChangeName = e => {
-    setName(e.currentTarget.value.trim());
-  };
-  const onChangeNumber = e => {
-    setNumber(e.currentTarget.value.trim());
-  };
-
+const ContactForm = ({
+  handleSubmit,
+  onChangeName,
+  onChangeNumber,
+  name,
+  number,
+}) => {
+  console.log(name, number);
   return (
     <form onSubmit={handleSubmit} className={css.contactForm}>
       <label htmlFor="name">Name</label>

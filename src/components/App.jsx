@@ -15,6 +15,15 @@ const App = () => {
         { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
       ]
   );
+   const [name, setName] = useState('');
+   const [number, setNumber] = useState('');
+
+   const onChangeName = e => {
+     setName(e.currentTarget.value.trim());
+   };
+   const onChangeNumber = e => {
+     setNumber(e.currentTarget.value.trim());
+   };
 
   const [filter, setFilter] = useState('');
 
@@ -60,7 +69,13 @@ const App = () => {
       }}
     >
       <Section title="PhoneBook">
-        <ContactForm handleSubmit={handleSubmit}></ContactForm>
+        <ContactForm
+          handleSubmit={handleSubmit}
+          onChangeName={onChangeName}
+          onChangeNumber={onChangeNumber}
+          name={name}
+          number={number}
+        ></ContactForm>
       </Section>
       <Section title="Contacts">
         <Filter value={filter} onChange={handleChangeSerchContacts} />
