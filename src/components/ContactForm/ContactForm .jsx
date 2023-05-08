@@ -1,6 +1,5 @@
 import css from './ContactForm.module.css';
 import propTypes from 'prop-types';
-import React, { useState } from 'react';
 
 const ContactForm = ({
   handleSubmit,
