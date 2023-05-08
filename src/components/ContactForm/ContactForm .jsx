@@ -9,7 +9,6 @@ const ContactForm = ({
   name,
   number,
 }) => {
-  console.log(name, number);
   return (
     <form onSubmit={handleSubmit} className={css.contactForm}>
       <label htmlFor="name">Name</label>
